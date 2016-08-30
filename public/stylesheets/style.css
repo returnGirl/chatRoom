@@ -1,0 +1,66 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  font-family: Arial;
+}
+
+.chatRoomContainner {
+  width: 500px;
+  height: 468px;
+  border-radius: 8px;
+  box-shadow: 5px solid #ccc;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.name {
+  background-color: #8bc5e8;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  border-bottom: 1px solid white;
+}
+
+p {
+  margin-top: 0px;
+}
+
+#chatArea {
+	width: 500px;
+	height: 275px;
+  background-color: #EDF5F9;
+}
+
+#chatArea .messages {
+	width: 200px;
+	height: auto;
+}
+.sperateArea {
+  height: 25px;
+  background-color: #cbe1ee;
+}
+.inputArea {
+  height: 87px;
+  background-color: #EDF5F9;
+}
+.footer {
+  background-color: #cbe1ee;
+  height: 31px;
+}
+.footer button {
+  width: 50px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  float: right;
+  margin-top: 6px;
+}
+textarea {
+  width: 500px;
+  height: 70px;
+  overflow: auto;
+  border: 0px;
+  outline: none;
+  background-color: #EDF5F9;
+}
