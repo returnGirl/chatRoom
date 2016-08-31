@@ -1,7 +1,7 @@
 var socket = io();
 $(function () {
 
-	var username = prompt('请输入昵称');
+	var username = prompt('请输入昵称') || '匿名';
 	$('.myname').html(username);
 	var input = $('.inputMessage');
 
@@ -15,12 +15,15 @@ $(function () {
 	});
 
 	socket.on('sys', function(msg) {
-		$('.messages').append('<p>' + msg + '</p>');
+		$('#chatArea').append('<div class = "messages"><div class="middle">' + msg + '</div></div>');
 		scrollToBottom();
 	});
 
 	socket.on('new message', function(msg, user) {
-		$('.messages').append('<p>' + user + '说: ' + msg + '</p>');
+		if (user == username)
+			$('#chatArea').append('<div class = "messages"><p class="right">' + '我说: ' + msg + '</p></div>');
+		else
+			$('#chatArea').append('<div class = "messages"><p class="left">' + user + '说: ' + msg + '</p></div>');
 		scrollToBottom();
 	});
 	input.on('keydown', function(e) {
@@ -36,7 +39,6 @@ function buttonClick() {
 	if (!message) {
 		return;
 	}
-	console.log(message);
 	socket.send(message);
 	$('.inputMessage').val('');
 };

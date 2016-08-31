@@ -30,11 +30,37 @@ p {
 	width: 500px;
 	height: 275px;
   background-color: #EDF5F9;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 #chatArea .messages {
-	width: 200px;
-	height: auto;
+	width: 500px;
+	height: 34px;
+}
+
+#chatArea .messages p {
+  max-width: 200px;
+  height: 20px;
+  margin: 3px 25px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#chatArea .messages .left {
+  text-align: left;
+  float: left;
+  background-color: rgba(242,60,84,0.50);;
+}
+#chatArea .messages .right {
+  text-align: right;
+  float: right;
+  background-color: rgba(71,158,162,0.50);
+}
+#chatArea .messages .middle {
+  text-align: center;
+  width: 500px;
+  color: gray;
 }
 .sperateArea {
   height: 25px;
